@@ -1,0 +1,122 @@
+@media (min-width: 576px) {
+    .nav-user-menu .user-image {
+        float: none;
+        line-height: 10px;
+        margin-top: -8px;
+    }
+}
+
+.nav-user-menu .user-image {
+    border-radius: 50%;
+    float: left;
+    height: 2rem;
+    margin-top: -4px;
+    width: 2rem;
+}
+
+.form-group.required .col-form-label:after {
+    color: #d00;
+    content: "*";
+    position: absolute;
+    margin-left: 3px;
+}
+
+/* Sweet alert */
+.swal2-title {
+    display: inline-block !important;
+}
+
+body.swal2-height-auto {
+    height: inherit !important;
+}
+
+.swal2-popup.swal2-toast {
+    padding: 10px 12px !important;
+    display: block !important;
+}
+
+.swal2-popup.swal2-toast .swal2-header,
+.swal2-popup.swal2-toast .swal2-title,
+.swal2-popup.swal2-toast .swal2-content {
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+.swal2-popup.swal2-toast .swal2-title {
+    margin-bottom: 4px !important;
+}
+
+div.wrapper,
+div.content-wrapper,
+div.sidebar {
+    min-height: 100vh;
+}
+
+.skin-primary {
+    background-color: #023d8d;
+    color: white !important;
+}
+
+.skin-secondary {
+    background-color: #3266ab;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #3266ab;
+}
+
+.nav-pills .nav-link {
+    color: #eeeeee;
+}
+
+.nav-pills .nav-link:not(.active):hover {
+    color: #3266ab;
+}
+
+.bg {
+    background-color: #3266ab;
+}
+
+.page-item.active .page-link {
+    background-color: #3266ab;
+    border-color: #3266ab;
+}
+
+.page-link,
+a {
+    color: #3266ab;
+}
+
+.page-link:hover {
+    color: #023d8d;
+}
+
+.btn-primary {
+    background-color: #023d8d;
+    border-color: #023d8d;
+}
+
+.btn-primary:hover {
+    background-color: #3266ab;
+    border-color: #3266ab;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    background-color: #979797;
+    border-color: #979797;
+}
+
+.login-page {
+    background: #023d8d;
+}
+
+.skin-primary-text {
+    color: white;
+}
+
+.ng-star-inserted .vertical .large-empty {
+    width: auto !important;
+}

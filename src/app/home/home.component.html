@@ -1,0 +1,59 @@
+﻿<div [@routerTransition]>
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h1>{{ "HomePage" | localize }}</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content px-2">
+        <div class="container-fluid">            
+            <div class="card">
+                <div class="card-body">
+                        <p>
+                            This sample project is managing gateways - master devices that control multiple peripheral devices.
+                            Your task is to create a REST service (JSON/HTTP) for storing information about these gateways and their associated
+                            devices. This information must be stored in the database.
+                        </p>
+                        <p>
+                            When storing a gateway, any field marked as “to be validated” must be validated and an error returned if it is
+                            invalid.
+                            Also, no more that 10 peripheral devices are allowed for a gateway.
+                            The service must also offer an operation for displaying information about all stored gateways (and their devices)
+                            and an
+                            operation for displaying details for a single gateway. Finally, it must be possible to add and remove a device from
+                            a  gateway.
+                        </p>
+                        <hr>
+                        <p>
+                            Each gateway has:
+                        </p>
+                        <li>a unique serial number (string)</li>
+                        <li>human-readable name (string)</li>
+                        <li>IPv4 address (to be validated)</li>
+                        <li>multiple associated peripheral devices                            
+                        </li>
+                        <hr>
+                        <p>
+                            Each peripheral device has:
+                        </p>
+                        <li>a UID (number)</li>
+                        <li>vendor (string)</li>
+                        <li>date created</li>
+                        <li>status - online/offline</li>
+
+                        <hr>
+                        <p>
+                            Other considerations. Please, provide:
+                         </p>
+                        <li>Basic UI - recommended or (providing test data for Postman (or other rest client) if you do not have enough time</li>
+                        <li> Meaningful Unit tests</li>
+                        <li>Readme file with installation guides</li>
+                        <li>An automated build</li>                        
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

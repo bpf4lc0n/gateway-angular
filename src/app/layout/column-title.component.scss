@@ -1,0 +1,20 @@
+.a-column-header {
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: none 86ms ease-out;
+}
+
+.a-column-header:not([href]) {
+    text-decoration: none;
+}
+
+.a-column-header:hover {
+    color: #23527c;
+    //text-decoration: underline;
+}
+
+a:not([href]):hover {
+    color: #23527c;
+    //text-decoration: underline;
+}

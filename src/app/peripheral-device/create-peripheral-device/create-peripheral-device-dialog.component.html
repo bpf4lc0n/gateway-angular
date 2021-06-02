@@ -1,0 +1,45 @@
+<form class="form-horizontal" autocomplete="off" #createGateModal="ngForm" (ngSubmit)="save()">
+    <abp-modal-header [title]="'CreatePeripheralDevice' | localize" (onCloseClick)="bsModalRef.hide()"></abp-modal-header>
+    <div class="modal-body">
+        <tabset>
+            <tab [heading]="'PeripheralDeviceDetails' | localize" class="pt-3 px-2">
+                <div class="form-group row required">
+                    <label class="col-md-3 col-form-label" for="name">
+                        {{ "UID" | localize }}
+                    </label>
+                    <div class="col-md-9">
+                        <input type="number" class="form-control" name="uid" id="uid" required min="1"
+                            [(ngModel)]="peripheralDevice.uid" #uidModel="ngModel" #uidEl />
+                        <abp-validation-summary [control]="uidModel" [controlEl]="uidEl"></abp-validation-summary>
+                    </div>
+                </div>
+                <div class="form-group row required">
+                    <label class="col-md-3 col-form-label" for="surname">
+                        {{ "Vendor" | localize }}
+                    </label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" name="vendor" id="vendor" required maxlength="50"
+                            [(ngModel)]="peripheralDevice.vendor" #vendorModel="ngModel" #vendorEl />
+                        <abp-validation-summary [control]="vendorModel" [controlEl]="vendorEl">
+                        </abp-validation-summary>
+                    </div>
+                </div>
+                <div class="form-group row required">
+                    <label class="col-md-3 col-form-label" for="surname">
+                        {{ "Status" | localize }}
+                    </label>
+                    <div class="col-md-9">
+                        <select [(ngModel)]="peripheralDevice.status" class="form-control" name="status" id="status" required 
+                         #statusModel="ngModel" #statusEl>
+                            <option *ngFor="let state of states" [ngValue]="state">{{ state }}</option>
+                        </select>
+                        <abp-validation-summary [control]="vendorModel" [controlEl]="vendorEl">
+                        </abp-validation-summary>
+                    </div>
+                </div>
+            </tab>           
+        </tabset>
+    </div>
+    <abp-modal-footer [cancelDisabled]="saving" [saveDisabled]="!createGateModal.form.valid || saving"
+        (onCancelClick)="bsModalRef.hide()"></abp-modal-footer>
+</form>

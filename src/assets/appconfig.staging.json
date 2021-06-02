@@ -1,0 +1,18 @@
+{
+  "remoteServiceBaseUrl": "https://cars-api.isucore.com",
+  "appBaseUrl": "https://cars-demo.isucore.com",
+  "localeMappings": [
+    {
+      "from": "pt-BR",
+      "to": "pt"
+    },
+    {
+      "from": "zh-CN",
+      "to": "zh"
+    },
+    {
+      "from": "he-IL",
+      "to": "he"
+    }
+  ]
+}

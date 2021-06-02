@@ -1,0 +1,28 @@
+<li
+    class="nav-item dropdown nav-user-menu"
+    dropdown
+>
+    <a
+        href="javascript:;"
+        class="nav-link"
+        dropdownToggle
+    >
+        <div class="row" >
+            <div class="col">
+                <a>{{ shownLoginName }}</a>
+            </div>
+        </div>
+    </a>
+    <div
+        class="dropdown-menu dropdown-menu-right"
+        *dropdownMenu
+    >
+        <a
+            class="dropdown-item"
+            href="javascript:;"
+            (click)="logout()"
+        >
+            <i class="fas fa-sign-out-alt"></i> {{ "Logout" | localize }}
+        </a>
+    </div>
+</li>

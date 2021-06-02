@@ -1,0 +1,10 @@
+<a
+    class="a-column-header"
+    (click)="clickFunc()"
+>
+    <span>{{ name | localize }}</span>&nbsp;
+    <i
+        class="{{ !descending ? 'fa fa-caret-up' : 'fa fa-caret-down' }}"
+        *ngIf="sortField == name || sortField == propertyName"
+    ></i>
+</a>

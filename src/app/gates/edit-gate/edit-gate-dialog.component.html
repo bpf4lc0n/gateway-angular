@@ -1,0 +1,46 @@
+﻿<form class="form-horizontal" autocomplete="off" #editGateModal="ngForm" (ngSubmit)="save()">
+    <abp-modal-header [title]="'EditGate' | localize" (onCloseClick)="bsModalRef.hide()"></abp-modal-header>
+    <div class="modal-body">
+        <tabset>
+            <tab [heading]="'GateDetails' | localize" class="pt-3 px-2">
+                <div class="form-group row required">
+                    <label class="col-md-3 col-form-label" for="name">
+                        {{ "UniqueSerialNumber" | localize }}
+                    </label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" name="unique_serial_number" id="unique_serial_number" required
+                            maxlength="50" [(ngModel)]="gate.unique_serial_number" #unique_serial_numberModel="ngModel"
+                            #unique_serial_numberEl />
+                        <abp-validation-summary [control]="unique_serial_numberModel" [controlEl]="unique_serial_numberEl">
+                        </abp-validation-summary>
+                    </div>
+                </div>
+                <div class="form-group row required">
+                    <label class="col-md-3 col-form-label" for="surname">
+                        {{ "HumanReadableName" | localize }}
+                    </label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" name="human_readable_name" id="human_readable_name" required maxlength="50"
+                        [(ngModel)]="gate.human_readable_name" #human_readable_nameModel="ngModel" #human_readable_nameEl />
+                    <abp-validation-summary [control]="human_readable_nameModel" [controlEl]="human_readable_nameEl">
+                    </abp-validation-summary>
+                </div>
+                </div>
+                <div class="form-group row required">
+                    <label class="col-md-3 col-form-label" for="password">
+                        {{ "IPV4" | localize }}
+                    </label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" name="ipv4" id="ipv4" required maxlength="15"                            
+                            pattern="^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$"
+                            [(ngModel)]="gate.ipV4_address" #ipv4Model="ngModel" #ipv4dEl />
+                        <abp-validation-summary [control]="ipv4Model" [controlEl]="ipv4dEl"
+                            [customValidationErrors]="ipv4ValidationErrors"></abp-validation-summary>
+                    </div>
+                </div>
+            </tab>            
+        </tabset>
+    </div>
+    <abp-modal-footer [cancelDisabled]="saving" [saveDisabled]="!editGateModal.form.valid || saving"
+        (onCancelClick)="bsModalRef.hide()"></abp-modal-footer>
+</form>

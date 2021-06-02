@@ -1,0 +1,38 @@
+<div class="card-header">
+  <div class="row">
+    <div class="col-12 text-right">
+      <a href="javascript:;" class="btn skin-primary" (click)="createGate()">
+        <i class="fa fa-mail-bulk"></i>
+        {{ "NewPeripheralDevice" | localize }}
+      </a>
+    </div>
+  </div>
+</div>
+<div class="card-body table-responsive p-0">
+  <table class="table table-hover text-nowrap">
+    <thead class="bg-light">
+      <tr>
+        <th>{{ "UID" | localize }}</th>
+        <th>{{ "Vendor" | localize }}</th>
+        <th>{{ "DateCreated" | localize }}</th>
+        <th>{{ "Status" | localize }}</th>
+        <th style="width: 310px;">{{ "Actions" | localize }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let peripheralDevice of peripheralDevices">
+        <td>{{ peripheralDevice.uid }}</td>
+        <td>{{ peripheralDevice.vendor }}</td>
+        <td>{{ peripheralDevice.dateCreated | date: 'yyyy-MM-dd' }}</td>
+        <td>{{ peripheralDevice.status }}</td>
+        <td>
+          <button type="button" class="btn btn-sm bg-danger mx-2" (click)="delete(peripheralDevice)">
+            <i class="fas fa-trash"></i>
+            {{ "Delete" | localize }}
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+        
