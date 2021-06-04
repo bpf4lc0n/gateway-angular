@@ -60,6 +60,9 @@ export class CreateGateDialogComponent extends AppComponentBase
         this.notify.success(this.l('SavedSuccessfully'));
         this.bsModalRef.hide();
         this.onSave.emit();
-      });
+      },
+        () => {
+          this.notify.error(this.l('IPV4MustBeAtLeast7CharactersContainNumbersAndPoints'));
+        });
   }
 }
